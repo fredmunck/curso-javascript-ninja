@@ -32,7 +32,7 @@ function showName() {
 /*
 Declare uma variável chamada `varShowName` que recebe a função criada acima.
 */
-var varShowName = showName
+var varShowName = showName // é só para passar a função, não invocar
 
 /*
 Usando a variável criada acima, mostre no console o nome e o retorno da função
@@ -53,30 +53,30 @@ vai efetuar. Será uma string com os valores `+`, `-`, `*`, `/` ou `%`;
   - Se o operador não for válido, retornar a frase:
   "Operação inválida."
 */
-function calculator(x) {
-  return function oper(a, b) {
+function calculator(operator) {
+  return function oper(n1, n2) {
     var result;
-    switch (x) {
+    switch (operator) {
       case '+':
-        result = a + b;
+        result = n1 + n2;
         break;
       case '-':
-        result = a - b;
+        result = n1 - n2;
         break;
       case '*':
-        result = a * b;
+        result = n1 * n2;
         break;
       case '/':
-        result = a / b;
+        result = n1 / n2;
         break;
       case '%':
-        result = a % b;
+        result = n1 % n2;
         break;
       default:
         console.log("Operação inválida.")
     }
     if(result != undefined) {
-      console.log(`Resultado da operação: ${a} ${x} ${b} = ${result}.`)
+      console.log(`Resultado da operação: ${n1} ${operator} ${n2} = ${result}.`)
     }
   }
 }
