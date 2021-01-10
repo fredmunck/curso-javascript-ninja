@@ -12,7 +12,8 @@ Invoque a função criada acima, passando dois números que serão somados, e mo
 o resultado no console, com a frase:
 "A soma de [VALOR 1] e [VALOR2] é igual a [RESULTADO]."
 */
-console.log('A soma de ' + 2 + ' e ' + 2 + ' é igual a ' + sum(2,2) + '.')
+var n1 = 10, n2 = 20
+console.log(`A soma de ${n1} e ${n2} é igual a ${sum(n1, n2)}.`)
 
 /*
 Mostre no console o nome da função criada acima, com a frase:
